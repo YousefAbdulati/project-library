@@ -1,0 +1,20 @@
+{% extends 'accounts/layouts/base.html'  %}
+{% load static %}
+{% block title %}  Logout  {% endblock %}
+{% block a %}
+<form method="post">
+
+            {% csrf_token %}
+
+<div class="bg-light">
+    {{form}}
+</div>
+</br>
+    </br>
+
+
+            <button type="submit" class="btn btn-primary" style="width:200px" >Register</button>
+</form>
+
+<script src="{% static 'accounts/js/script.js'%}"> </script>
+{% endblock %}

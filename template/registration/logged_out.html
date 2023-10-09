@@ -1,0 +1,12 @@
+{% extends 'accounts/layouts/base.html' %}
+{% load static %}
+{% block title %}  Logout  {% endblock %}
+
+{% block a %}
+
+<div class="alert alert-warning alert-dismissible fade show" role="alert">
+  <strong>Logged out successfully!</strong>
+  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+<script src="{% static 'Admin/js/script.js'%}"> </script>
+{% endblock %}

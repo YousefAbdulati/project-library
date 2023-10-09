@@ -1,0 +1,18 @@
+{% extends 'accounts/layouts/base.html' %}
+{% load static %}
+{% block title %}  Delete Book  {% endblock %}
+
+{% block a %}
+<div class="bg-light">
+    <h1> Delete Book </h1>
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+
+        <p> Are you want to delete this Book  </p>
+
+        <button type="submit" class="btn btn-danger">Delete</button>
+    </form>
+    <a href="{{allbooks.get_show_url}}" class="btn btn-dark"> Cancel</a>
+</div>
+<script src="{% static 'accounts/js/script.js' %}"> </script>
+{% endblock %}

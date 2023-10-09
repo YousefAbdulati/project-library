@@ -1,0 +1,17 @@
+{% extends 'accounts/layouts/base.html' %}
+{% load static %}
+{% block title %}  Login  {% endblock %}
+
+{% block a %}
+<div class="bg-light">
+    <h1> Login </h1>
+    <form method="post" enctype="multipart/form-data" >
+        {% csrf_token %}
+
+        {{form}}
+<br/>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>
+<script src="{% static 'accounts/js/script.js' %}"> </script>
+{% endblock %}

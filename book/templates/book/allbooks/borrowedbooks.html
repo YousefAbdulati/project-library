@@ -1,0 +1,32 @@
+{% extends 'accounts/layouts/base.html' %}
+{% load static %}
+{% block title %}  All Books  {% endblock %}
+
+{% block a %}
+
+
+<br/>
+    <h2 style="text-align:center;font-size:40px"> All Borrowed Books </h2>
+<br/>
+
+    {% for borrowed_book in all_borrowed_books %}
+        {% csrf_token %}
+    <div style="display:inline-block">
+        <div class="card" style="width: 18rem;">
+         <img src="{{borrowed_book.book.get_image_url}}" width="200" height="200" class="card-img-top"
+                 alt="...">
+            <div class="card-body"> <h5 class="card-title">Book name : {{borrowed_book.book}}</h5>
+
+            </div>
+            <div class="card-body"> <h5 class="card-title"> Borrowed BY: {{borrowed_book.user}}</h5>
+
+            </div>
+            <div class="card-body"> <h5 class="card-title">Written by  : {{borrowed_book.book.auther}}</h5>
+
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+
+{% endblock %}
+
